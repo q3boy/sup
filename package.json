@@ -1,9 +1,13 @@
 {
   "name": "sup",
-  "version": "0.0.1",
-  "description": "An Simple Node Static Server",
+  "version": "0.0.2",
+  "description": "A Simple Node Static Server",
   "main": "index.js",
+  "bin": {
+    "sup": "./bin/sup"
+  },
   "scripts": {
+    "prepublish": "rm bin/sup; yaml2json -sp package.yaml && echo '#!/usr/bin/env node' > bin/sup && coffee -cpb lib/server.coffee >> bin/sup && chmod u+x bin/sup && chmod g+x bin/sup",
     "test": "make test"
   },
   "repository": {
@@ -18,15 +22,12 @@
   "author": "q3boy <q3boy1@gmail.com>",
   "license": "BSD",
   "dependencies": {
-    "argparse": "~0.1.12",
-    "connect": "~2.7.3"
+    "argparse": "*",
+    "connect": "*",
+    "connect-index": "*"
   },
   "devDependencies": {
-    "expect.js": "~0.2.0",
-    "coffee-script": "~1.6.2",
-    "stylus": "~0.32.1",
-    "jade": "~0.28.2",
-    "mocha": "~1.8.2",
-    "supertest": "~0.5.1"
+    "coffee-script": "*",
+    "yamljs": "*"
   }
 }
