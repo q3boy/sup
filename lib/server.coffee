@@ -37,7 +37,9 @@ app.use connect.errorHandler()
 
 http.listen args.port, ->
   console.log "Server #{args.dir} on #{args.port}"
-  url = "http://localhost:#{args.port}/#{args.file || ''}"
+  url = "http://localhost:#{args.port}/"
+  url = path.join url, args.open
   exec "open '#{url}'"
+
 
 

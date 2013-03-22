@@ -36,7 +36,7 @@ parser.addArgument(['-l', '--list'], {
 });
 
 parser.addArgument(['-o', '--open'], {
-  help: 'open file',
+  help: 'file to open',
   nargs: '?'
 });
 
@@ -81,6 +81,7 @@ http.listen(args.port, function() {
   var url;
 
   console.log("Server " + args.dir + " on " + args.port);
-  url = "http://localhost:" + args.port + "/" + (args.file || '');
+  url = "http://localhost:" + args.port + "/";
+  url = path.join(url, args.open);
   return exec("open '" + url + "'");
 });
