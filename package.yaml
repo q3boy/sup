@@ -1,5 +1,5 @@
 name: sup
-version: 0.0.3
+version: 0.0.4
 description: 'A Simple Node Static Server'
 main: index.js
 bin:
@@ -19,7 +19,11 @@ license: BSD
 dependencies:
   argparse: '*'
   connect: '*'
+  markdown: '*'
+  yamljs: '*'
+  jade: '*'
+  stylus: '*'
   connect-index: '*'
+  connect-compiler: '*'
 devDependencies:
   coffee-script: '*'
-  yamljs: '*'

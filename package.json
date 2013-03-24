@@ -1,6 +1,6 @@
 {
   "name": "sup",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Simple Node Static Server",
   "main": "index.js",
   "bin": {
@@ -24,10 +24,14 @@
   "dependencies": {
     "argparse": "*",
     "connect": "*",
-    "connect-index": "*"
+    "markdown": "*",
+    "yamljs": "*",
+    "jade": "*",
+    "stylus": "*",
+    "connect-index": "*",
+    "connect-compiler": "*"
   },
   "devDependencies": {
-    "coffee-script": "*",
-    "yamljs": "*"
+    "coffee-script": "*"
   }
 }
